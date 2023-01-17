@@ -17,7 +17,7 @@ For a = [1, 2, 2] and b = [2, 1, 1], the output should be
 solution(a, b) = false.
 Any swap of any two elements either in a or in b won't make a and b equal.
  */
-public class CS10_AreSimilar {
+public class CS16_AreSimilar {
     public static void main(String[] args) {
         int[] a = {832, 998, 148, 570, 533, 561, 894, 147, 455, 279};
         int[] b = {832, 570, 148, 998, 533, 561, 455, 147, 894, 279};

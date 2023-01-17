@@ -17,7 +17,7 @@ For inputString = "foo(bar(baz))blim", the output should be
 solution(inputString) = "foobazrabblim".
 Because "foo(bar(baz))blim" becomes "foo(barzab)blim" and then "foobazrabblim".
  */
-public class CS07_ReverseInParentheses {
+public class CS13_ReverseInParentheses {
     public static void main(String[] args) {
         String str = "foo(bar(baz))blim";
         System.out.println("solution(str) = " + solution(str));

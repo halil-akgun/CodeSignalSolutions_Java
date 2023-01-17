@@ -13,7 +13,7 @@ solution(n) = true;
 For n = 239017, the output should be
 solution(n) = false.
  */
-public class CS05_isLucky {
+public class CS11_isLucky {
     public static void main(String[] args) {
         int num = 11;
         System.out.println("solution(num) = " + solution(num));

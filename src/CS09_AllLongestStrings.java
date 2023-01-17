@@ -6,7 +6,7 @@ Example
 For inputArray = ["aba", "aa", "ad", "vcd", "aba"], the output should be
 solution(inputArray) = ["aba", "vcd", "aba"].
  */
-public class CS03_AllLongestStrings {
+public class CS09_AllLongestStrings {
     public static void main(String[] args) {
         String inputArray[] = {"aba", "aa", "ad", "vcd", "aba"};
         System.out.println(Arrays.toString(solution(inputArray)));

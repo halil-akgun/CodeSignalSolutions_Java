@@ -18,7 +18,7 @@ solution(sequence) = true.
 You can remove 3 from the array to get the strictly increasing sequence [1, 2]. Alternately, you can remove 2 to get
 the strictly increasing sequence [1, 3].
  */
-public class CS01_AlmostIncreasingSequence {
+public class CS07_AlmostIncreasingSequence {
     public static void main(String[] args) {
 
         int arr[] = {10, 1, 2, 3, 4, 5};

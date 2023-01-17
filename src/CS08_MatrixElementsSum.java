@@ -1,4 +1,4 @@
-public class CS02_MatrixElementsSum {
+public class CS08_MatrixElementsSum {
     public static void main(String[] args) {
         /*
         After becoming famous, the CodeBots decided to move into a new building together. Each of the rooms has

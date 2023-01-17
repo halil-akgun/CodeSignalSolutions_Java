@@ -14,7 +14,7 @@ solution(yourLeft, yourRight, friendsLeft, friendsRight) = true;
 For yourLeft = 15, yourRight = 10, friendsLeft = 15, and friendsRight = 9, the output should be
 solution(yourLeft, yourRight, friendsLeft, friendsRight) = false.
  */
-public class CS13_areEquallyStrong {
+public class CS19_areEquallyStrong {
     public static void main(String[] args) {
         System.out.println(solution(15, 10, 9, 15));
     }

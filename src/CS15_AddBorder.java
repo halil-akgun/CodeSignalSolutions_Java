@@ -14,7 +14,7 @@ solution(picture) = ["*****",
                       "*ded*",
                       "*****"]
  */
-public class CS09_AddBorder {
+public class CS15_AddBorder {
     public static void main(String[] args) {
         String[] arr = {"asd", "qwe"};
         System.out.println(Arrays.toString(solution(arr)));

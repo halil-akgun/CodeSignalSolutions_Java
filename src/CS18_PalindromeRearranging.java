@@ -11,7 +11,7 @@ solution(inputString) = true.
 
 We can rearrange "aabb" to make "abba", which is a palindrome.
  */
-public class CS12_PalindromeRearranging {
+public class CS18_PalindromeRearranging {
     public static void main(String[] args) {
         System.out.println(solution("aabb"));
     }

@@ -11,7 +11,7 @@ Example
 For a = [-1, 150, 190, 170, -1, -1, 160, 180], the output should be
 solution(a) = [-1, 150, 160, 170, -1, -1, 180, 190].
  */
-public class CS06_SortByHeight {
+public class CS12_SortByHeight {
     public static void main(String[] args) {
         int a[] = {-1, 150, 190, 170, -1, -1, 160, 180};
         System.out.println(Arrays.toString(solution(a)));

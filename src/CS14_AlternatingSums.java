@@ -11,7 +11,7 @@ Example
 For a = [50, 60, 60, 45, 70], the output should be
 solution(a) = [180, 105].
  */
-public class CS08_AlternatingSums {
+public class CS14_AlternatingSums {
     public static void main(String[] args) {
         int arr[] = {50, 60, 60, 45, 70};
         System.out.println("solution(arr) = " + Arrays.toString(solution(arr)));

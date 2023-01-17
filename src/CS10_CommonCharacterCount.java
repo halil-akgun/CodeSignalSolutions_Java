@@ -12,7 +12,7 @@ solution(s1, s2) = 3.
 
 Strings have 3 common characters - 2 "a"s and 1 "c".
  */
-public class CS04_CommonCharacterCount {
+public class CS10_CommonCharacterCount {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         String a = scan.next();
