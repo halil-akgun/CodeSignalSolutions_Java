@@ -7,16 +7,17 @@ For inputString = "crazy", the output should be solution(inputString) = "dsbaz".
  */
 public class CS28_alphabeticShift {
     public static void main(String[] args) {
-        System.out.println(solution("qwerZAz"));
+        String str = "qwerZAz";
+        System.out.println(solution(str));
     }
 
     static String solution(String inputString) {
-        String result = "";
+        StringBuilder result = new StringBuilder();
         for (int i = 0; i < inputString.length(); i++) {
-            if (inputString.charAt(i) == 'Z') result += "A";
-            else if (inputString.charAt(i) == 'z') result += "a";
-            else result += (char) (inputString.charAt(i) + 1);
+            if (inputString.charAt(i) == 'Z') result.append("A");
+            else if (inputString.charAt(i) == 'z') result.append("a");
+            else result.append((char) (inputString.charAt(i) + 1));
         }
-        return result;
+        return result.toString();
     }
 }
