@@ -34,7 +34,6 @@ public class CS33_stringsRearrangement {
     static boolean solution(String[] inputArray) {
         if (inputArray.length < 3) return false;
         boolean isValid;
-        int isValidCounter = 0;
         ArrayList<int[]> permutations = combinations(inputArray.length);
         List<String> temp1 = new ArrayList<>();
         List<String> temp2 = new ArrayList<>();
