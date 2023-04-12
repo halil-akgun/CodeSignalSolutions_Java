@@ -11,7 +11,7 @@ solution(address) = "example.com";
 For address = "fully-qualified-domain@codesignal.com", the output should be
 solution(address) = "codesignal.com".
  */
-public class CS43_FindEmailDomain {
+public class CS44_FindEmailDomain {
     public static void main(String[] args) {
         String mail = "asd@asd.com";
         System.out.println(solution(mail));

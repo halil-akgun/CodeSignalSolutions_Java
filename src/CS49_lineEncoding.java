@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
-
 /*
 Given a string, return its encoding defined as follows:
 
@@ -14,7 +11,7 @@ Example
 For s = "aabbbc", the output should be
 solution(s) = "2a3bc".
  */
-public class CS48_lineEncoding {
+public class CS49_lineEncoding {
     public static void main(String[] args) {
         System.out.println(solution("aabbbc"));
     }

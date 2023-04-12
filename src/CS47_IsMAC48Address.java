@@ -15,7 +15,7 @@ solution(inputString) = false;
 For inputString = "not a MAC-48 address", the output should be
 solution(inputString) = false.
  */
-public class CS46_IsMAC48Address {
+public class CS47_IsMAC48Address {
     public static void main(String[] args) {
         String mac = "02-03-04-05-556-07";
         System.out.println(solution(mac));

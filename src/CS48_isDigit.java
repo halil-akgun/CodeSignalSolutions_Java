@@ -7,7 +7,7 @@ solution(symbol) = true;
 For symbol = '-', the output should be
 solution(symbol) = false.
  */
-public class CS47_isDigit {
+public class CS48_isDigit {
     public static void main(String[] args) {
         System.out.println(solution('a'));
     }

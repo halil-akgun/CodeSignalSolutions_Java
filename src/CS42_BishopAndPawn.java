@@ -13,7 +13,7 @@ For bishop = "h1" and pawn = "h3", the output should be
 solution(bishop, pawn) = false.
 https://codesignal.s3.amazonaws.com/uploads/1664394255/ex2.jpg?raw=true
  */
-public class CS41_BishopAndPawn {
+public class CS42_BishopAndPawn {
     public static void main(String[] args) {
         String bishop = "a1";
         String pawn = "c3";

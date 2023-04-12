@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.List;
 
 /*
@@ -16,7 +15,7 @@ For n = 91, the output should be
 solution(n) = 2.
 9 + 1 = 10 -> 1 + 0 = 1.
  */
-public class CS40_digitDegree {
+public class CS41_digitDegree {
     public static void main(String[] args) {
         System.out.println(solution(91));
     }

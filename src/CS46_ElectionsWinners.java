@@ -18,7 +18,7 @@ The third candidate can win even if none of the remaining candidates vote for hi
 The last candidate can't win no matter what (for the same reason as the first candidate).
 Thus, only 2 candidates can win (the second and the third), which is the answer.
  */
-public class CS45_ElectionsWinners {
+public class CS46_ElectionsWinners {
     public static void main(String[] args) {
         int[] votes = {2, 3, 5, 2};
         int k = 3;

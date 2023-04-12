@@ -6,7 +6,7 @@ Example
 For st = "abcdc", the output should be
 solution(st) = "abcdcba".
  */
-public class CS44_buildPalindrome {
+public class CS45_buildPalindrome {
     public static void main(String[] args) {
         String str = "abcdc";
         System.out.println(solution(str));

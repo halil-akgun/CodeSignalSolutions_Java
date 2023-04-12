@@ -19,7 +19,7 @@ Since there are more bs than as, this string is not beautiful.
 For inputString = "bbc", the output should be solution(inputString) = false.
 Although there are more bs than cs, this string is not beautiful because there are no as, so therefore there are more bs than as.
  */
-public class CS42_isBeautifulString {
+public class CS43_isBeautifulString {
     public static void main(String[] args) {
         String str = "bbbaacdafe";
         System.out.println(solution(str));
