@@ -18,12 +18,10 @@ public class CS03_checkPalindrome {
 
     static boolean solution(String inputString) {
 
-        for (int i = 0; i < inputString.length(); i++) {
-            if (!(inputString.charAt(i) == inputString.charAt(inputString.length() - 1 - i))) {
-                return false;
-            }
+        for (int i = 0; i < inputString.length() / 2; i++) {
+            System.out.println(i);
+            if (inputString.charAt(i) != inputString.charAt(inputString.length() - 1 - i)) return false;
         }
         return true;
-
     }
 }

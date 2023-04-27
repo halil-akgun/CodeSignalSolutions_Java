@@ -23,7 +23,7 @@ the strictly increasing sequence [1, 3].
 public class CS07_AlmostIncreasingSequence {
     public static void main(String[] args) {
 
-        int arr[] = {10, 1, 2, 3, 4, 5};
+        int[] arr = {10, 1, 2, 3, 4, 5};
         System.out.println("solution(arr) = " + solution(arr));
 
     }
@@ -64,11 +64,6 @@ public class CS07_AlmostIncreasingSequence {
                 }
             }
         }
-
-        if (counter > 1) {
-            return false;
-        } else {
-            return true;
-        }
+        return counter <= 1;
     }
 }

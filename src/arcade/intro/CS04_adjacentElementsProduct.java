@@ -16,7 +16,7 @@ public class CS04_adjacentElementsProduct {
     }
 
     static int solution(int[] inputArray) {
-        int max = inputArray[0] * inputArray[1];
+        int max = Integer.MIN_VALUE;
         for (int i = 1; i < inputArray.length; i++) {
             max = Math.max(max, inputArray[i] * inputArray[i - 1]);
         }
