@@ -1,6 +1,6 @@
 package arcade.intro;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /*
@@ -22,23 +22,14 @@ public class CS06_MakeArrayConsecutive2 {
     }
 
     static int solution(int[] statues) {
-        List<Integer> statues2 = new ArrayList<>();
-        int min = statues[0];
-        int max = statues[0];
-        for (int w : statues) {
-            statues2.add(w);
-            if (w < min) {
-                min = w;
-            } else if (w > max) {
-                max = w;
-            }
+        List<Integer> statues2 = Arrays.stream(statues).sorted().boxed().toList();
+        int min = statues2.get(0);
+        int max = statues2.get(statues2.size() - 1);
+        int result = 0;
+
+        for (int i = min + 1; i < max; i++) {
+            if (!(statues2.contains(i))) result++;
         }
-        List<Integer> add = new ArrayList<>();
-        for (int i = min; i < max; i++) {
-            if (!(statues2.contains(i))) {
-                add.add(i);
-            }
-        }
-        return add.size();
+        return result;
     }
 }
