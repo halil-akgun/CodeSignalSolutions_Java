@@ -1,6 +1,6 @@
 package arcade.intro;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /*
@@ -23,47 +23,61 @@ the strictly increasing sequence [1, 3].
 public class CS07_AlmostIncreasingSequence {
     public static void main(String[] args) {
 
-        int[] arr = {10, 1, 2, 3, 4, 5};
+        int[] arr = {1, 3, 2, 1};
         System.out.println("solution(arr) = " + solution(arr));
 
     }
 
     static boolean solution(int[] sequence) {
-        List<Integer> temp = new ArrayList<>();
-        for (int w : sequence) {
-            temp.add(w);
-        }
-        int counter = 0;
-        for (int i = 0; i < temp.size() - 1; i++) {
-            for (int j = i + 1; j < i + 2; j++) {
-                if ((i == 0) & (!(temp.get(i) < temp.get(j)))) {
-                    counter++;
-                    temp.remove(i);
-                    if (j != temp.size()) j--;
-                } else if ((counter == 0) & (!(temp.get(i) < temp.get(j)))) {
-                    if (j + 1 == temp.size() - 1) {
-                        if (temp.get(j) < temp.get(j + 1) & temp.get(j) > temp.get(j - 2)) {
-                            counter++;
-                            temp.remove(i);
-                            if (j != temp.size()) j--;
-                        } else {
-                            counter++;
-                            temp.remove(j);
-                            if (j != temp.size()) j--;
-                        }
-                    } else {
-                        counter++;
-                        temp.remove(j);
-                        if (j != temp.size()) j--;
-                    }
-
-                } else if (!(temp.get(i) < temp.get(j))) {
-                    counter++;
-                    temp.remove(j);
-                    if (j != temp.size()) j--;
-                }
+        List<Integer> tempList = Arrays.stream(sequence).boxed().toList();
+        int count = 0;
+        for (int i = 0; i < tempList.size(); i++) {
+            for (int j = 1; j < tempList.size(); j++) {
+                if (j == i || (i == 0 && j == 1)) continue;
+                if (i + 1 == j) {
+                    if (tempList.get(j) > tempList.get(j - 2)) count++;
+                } else if (tempList.get(j) > tempList.get(j - 1)) count++;
             }
+            if (count == tempList.size() - 2) return true;
+            count = 0;
         }
-        return counter <= 1;
+        return false;
+
+//
+//        List<Integer> temp = new ArrayList<>();
+//        for (int w : sequence) {
+//            temp.add(w);
+//        }
+//        int counter = 0;
+//        for (int i = 0; i < temp.size() - 1; i++) {
+//            for (int j = i + 1; j < i + 2; j++) {
+//                if ((i == 0) & (!(temp.get(i) < temp.get(j)))) {
+//                    counter++;
+//                    temp.remove(i);
+//                    if (j != temp.size()) j--;
+//                } else if ((counter == 0) & (!(temp.get(i) < temp.get(j)))) {
+//                    if (j + 1 == temp.size() - 1) {
+//                        if (temp.get(j) < temp.get(j + 1) & temp.get(j) > temp.get(j - 2)) {
+//                            counter++;
+//                            temp.remove(i);
+//                            if (j != temp.size()) j--;
+//                        } else {
+//                            counter++;
+//                            temp.remove(j);
+//                            if (j != temp.size()) j--;
+//                        }
+//                    } else {
+//                        counter++;
+//                        temp.remove(j);
+//                        if (j != temp.size()) j--;
+//                    }
+//                } else if (!(temp.get(i) < temp.get(j))) {
+//                    counter++;
+//                    temp.remove(j);
+//                    if (j != temp.size()) j--;
+//                }
+//            }
+//        }
+//        return counter <= 1;
     }
 }
