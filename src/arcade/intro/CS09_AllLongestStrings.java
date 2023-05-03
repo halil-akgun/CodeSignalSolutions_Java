@@ -10,23 +10,23 @@ solution(inputArray) = ["aba", "vcd", "aba"].
  */
 public class CS09_AllLongestStrings {
     public static void main(String[] args) {
-        String inputArray[] = {"aba", "aa", "ad", "vcd", "aba"};
+        String[] inputArray = {"aba", "aa", "ad", "vcd", "aba"};
         System.out.println(Arrays.toString(solution(inputArray)));
     }
 
     public static String[] solution(String[] inputArray) {
-        int max = 0;
-        for (String w : inputArray) {
-            if (w.length() > max) max = w.length();
-        }
+        Arrays.sort(inputArray);
+        int maxLength = inputArray[inputArray.length - 1].length();
         int counter = 0;
+
         for (String w : inputArray) {
-            if (w.length() == max) counter++;
+            if (w.length() == maxLength) counter++;
         }
-        String result[] = new String[counter];
+
+        String[] result = new String[counter];
         int idx = 0;
         for (String w : inputArray) {
-            if (w.length() == max) {
+            if (w.length() == maxLength) {
                 result[idx] = w;
                 idx++;
             }
