@@ -22,7 +22,7 @@ For score1 = 6 and score2 = 5, the output should be
 solution(score1, score2) = false.
 This set will continue until one of these players wins their 7th game, so this can't be the final score.
  */
-public class CS14_TennisSet {
+public class CS014_TennisSet {
     public static void main(String[] args) {
         System.out.println(solution(7, 4));
     }

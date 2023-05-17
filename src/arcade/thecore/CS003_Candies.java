@@ -11,7 +11,7 @@ solution(n, m) = 9.
 
 Each child will eat 3 pieces. So the answer is 9.
  */
-public class CS03_Candies {
+public class CS003_Candies {
     public static void main(String[] args) {
         System.out.println(solution(3, 10));
     }

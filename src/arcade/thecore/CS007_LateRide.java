@@ -20,7 +20,7 @@ For n = 808, the output should be
 solution(n) = 14.
 808 minutes mean that it's 13:28 now, so the answer should be 1 + 3 + 2 + 8 = 14.
  */
-public class CS07_LateRide {
+public class CS007_LateRide {
     public static void main(String[] args) {
         System.out.println(solution(240));
     }

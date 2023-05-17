@@ -14,7 +14,7 @@ solution(divisor, bound) = 9.
 
 The largest integer divisible by 3 and not larger than 10 is 9.
  */
-public class CS05_MaxMultiple {
+public class CS005_MaxMultiple {
     public static void main(String[] args) {
         System.out.println(solution(3, 10));
     }

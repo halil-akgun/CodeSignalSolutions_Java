@@ -23,7 +23,7 @@ Example
     solution(value1, weight1, value2, weight2, maxW) = 7.
     You can't take both items, but you can take any of them.
  */
-public class CS10_KnapsackLight {
+public class CS010_KnapsackLight {
     public static void main(String[] args) {
         System.out.println(solution(10, 5, 6, 4, 8));
     }

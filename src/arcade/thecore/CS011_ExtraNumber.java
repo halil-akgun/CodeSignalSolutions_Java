@@ -10,7 +10,7 @@ solution(a, b, c) = 7.
 
 The two equal numbers are a and c. The third number (b) equals 7, which is the answer.
  */
-public class CS11_ExtraNumber {
+public class CS011_ExtraNumber {
     public static void main(String[] args) {
         System.out.println(solution(2, 7, 2));
     }

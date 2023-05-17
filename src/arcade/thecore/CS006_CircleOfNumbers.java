@@ -11,7 +11,7 @@ For n = 10 and firstNumber = 2, the output should be
 solution(n, firstNumber) = 7.
 https://codesignal.s3.amazonaws.com/uploads/1664318506/example.png?raw=true
  */
-public class CS06_CircleOfNumbers {
+public class CS006_CircleOfNumbers {
     public static void main(String[] args) {
         System.out.println(solution(10, 2));
     }

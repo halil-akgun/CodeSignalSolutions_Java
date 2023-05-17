@@ -20,7 +20,7 @@ Thus, the longest call you can make is 1 + 9 + 4 = 14 minutes long.
 solution(2, 2, 1, 2) = 1
 solution(1, 2, 1, 6) = 3
  */
-public class CS08_PhoneCall {
+public class CS008_PhoneCall {
     public static void main(String[] args) {
         System.out.println(solution(2, 2, 1, 2));
     }

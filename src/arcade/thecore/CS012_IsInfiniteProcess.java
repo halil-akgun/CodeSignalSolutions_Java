@@ -15,7 +15,7 @@ solution(a, b) = false;
 For a = 2 and b = 3, the output should be
 solution(a, b) = true.
  */
-public class CS12_IsInfiniteProcess {
+public class CS012_IsInfiniteProcess {
     public static void main(String[] args) {
         System.out.println(solution(2, 6));
     }

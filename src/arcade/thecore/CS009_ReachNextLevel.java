@@ -13,7 +13,7 @@ solution(experience, threshold, reward) = true;
 For experience = 10, threshold = 15, and reward = 4, the output should be
 solution(experience, threshold, reward) = false.
  */
-public class CS09_ReachNextLevel {
+public class CS009_ReachNextLevel {
     public static void main(String[] args) {
         System.out.println(solution(10, 15, 5));
     }

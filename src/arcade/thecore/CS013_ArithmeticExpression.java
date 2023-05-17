@@ -21,7 +21,7 @@ solution(a, b, c) = false.
 8 / 3 = 2.(6) ≠ 2.
 So the answer is false.
  */
-public class CS13_ArithmeticExpression {
+public class CS013_ArithmeticExpression {
     public static void main(String[] args) {
         System.out.println(solution(8, 4, 2));
     }

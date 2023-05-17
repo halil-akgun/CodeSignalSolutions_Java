@@ -7,7 +7,7 @@ Example
 For n = 2, the output should be
 solution(n) = 99.
  */
-public class CS02_LargestNumber {
+public class CS002_LargestNumber {
     public static void main(String[] args) {
         System.out.println(solution(7));
     }
