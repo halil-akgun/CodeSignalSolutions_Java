@@ -39,7 +39,7 @@ public class CS26_CountSumOfTwoRepresentations2 {
 
 
 //        return helperMethod(n, l, l, r);
-//        Exception in thread "main" java.lang.StackOverflowError
+//        Exception in thread "main" java.lang.StackOverflowError - For n = 1000000, l = 490000, and r = 900000
 
 
         int maxA = Math.min(n - l, r);
@@ -51,23 +51,23 @@ public class CS26_CountSumOfTwoRepresentations2 {
         return (maxA - minA) / 2 + 1;
     }
 
-    private static int helperMethod(int n, int l, int r, int border) {
-        int count = 0;
-        if (l <= border) {
-            count = helperMethod2(n, l, r, border);
-            if (l + 1 <= border) {
-                count += helperMethod(n, l + 1, l + 1, border);
-            }
-        }
-        return count;
-    }
+//    private static int helperMethod(int n, int l, int r, int border) {
+//        int count = 0;
+//        if (l <= border) {
+//            count = helperMethod2(n, l, r, border);
+//            if (l + 1 <= border) {
+//                count += helperMethod(n, l + 1, l + 1, border);
+//            }
+//        }
+//        return count;
+//    }
 
-    private static int helperMethod2(int n, int l, int r, int border) {
-        int count = 0;
-        if (l + r <= n && r <= border) {
-            count = helperMethod2(n, l, r + 1, border);
-            if (l + r == n) count++;
-        }
-        return count;
-    }
+//    private static int helperMethod2(int n, int l, int r, int border) {
+//        int count = 0;
+//        if (l + r <= n && r <= border) {
+//            count = helperMethod2(n, l, r + 1, border);
+//            if (l + r == n) count++;
+//        }
+//        return count;
+//    }
 }
