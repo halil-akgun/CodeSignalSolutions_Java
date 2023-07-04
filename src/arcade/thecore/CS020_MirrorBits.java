@@ -11,7 +11,7 @@ solution(a) = 67.
 For a = 8, the output should be
 solution(a) = 1.
  */
-public class CS20_MirrorBits {
+public class CS020_MirrorBits {
     public static void main(String[] args) {
         System.out.println(solution(97));
     }

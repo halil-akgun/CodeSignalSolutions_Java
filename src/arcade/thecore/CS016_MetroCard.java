@@ -23,7 +23,7 @@ There are 30 days in April, June, September and November, so the next months to 
 October or December. All of them have exactly 31 days, which means that you will definitely
 get a 31-days pass the next time you extend your card.
  */
-public class CS16_MetroCard {
+public class CS016_MetroCard {
     public static void main(String[] args) {
         System.out.println(Arrays.toString(solution(30)));
     }

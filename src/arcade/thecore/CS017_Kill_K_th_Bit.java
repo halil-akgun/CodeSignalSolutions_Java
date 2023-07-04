@@ -19,7 +19,7 @@ For n = 37 and k = 4, the output should be
 solution(n, k) = 37.
 The 4th bit is 0 already (looks like the Mad Coder forgot to encrypt this number), so the answer is still 37.
  */
-public class CS17_Kill_K_th_Bit {
+public class CS017_Kill_K_th_Bit {
     public static void main(String[] args) {
         System.out.println(solution(2039063284, 4));
     }

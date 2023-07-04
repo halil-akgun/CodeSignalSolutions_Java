@@ -13,7 +13,7 @@ solution(n) = 24.
 
 17 < 24 = 4! = 1 * 2 * 3 * 4, while 3! = 1 * 2 * 3 = 6 < 17).
  */
-public class cs25_LeastFactorial {
+public class CS025_LeastFactorial {
     public static void main(String[] args) {
         System.out.println(solution(17));
     }

@@ -21,7 +21,7 @@ An array [24, 85, 0] looks like [00011000, 01010101, 00000000] in binary.
 After packing these into one number we get 00000000 01010101 00011000
 (spaces are placed for convenience), which equals to 21784.
  */
-public class CS18_ArrayPacking {
+public class CS018_ArrayPacking {
     public static void main(String[] args) {
         int[] arr = {24, 85, 0};
         System.out.println(solution(arr));

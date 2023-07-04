@@ -13,7 +13,7 @@ solution(a, b) = 11.
 Given a = 2 and b = 7 the array is: [2, 3, 4, 5, 6, 7]. Converting the numbers to binary,
 we get [10, 11, 100, 101, 110, 111], which contains 1 + 2 + 1 + 2 + 2 + 3 = 11 1s.
  */
-public class CS19_RangeBitCount {
+public class CS019_RangeBitCount {
     public static void main(String[] args) {
         System.out.println(solution(2, 7));
     }

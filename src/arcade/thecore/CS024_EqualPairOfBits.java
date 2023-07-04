@@ -15,7 +15,7 @@ solution(n, m) = 2.
 at position 1 (0-based) from the right in the binary representations.
 So the answer is 21 = 2.
  */
-public class CS24_EqualPairOfBits {
+public class CS024_EqualPairOfBits {
     public static void main(String[] args) {
         int n = 10;
         int m = 11;

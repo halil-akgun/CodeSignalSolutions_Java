@@ -22,7 +22,7 @@ solution(n, m) = 16.
 10111
 So the answer is 24 = 16.
  */
-public class CS23_DifferentRightmostBit {
+public class CS023_DifferentRightmostBit {
     public static void main(String[] args) {
         int n = 11;
         int m = 13;

@@ -15,7 +15,7 @@ solution(n) = 8.
 in the binary representation of n.
 Thus, the answer is 23 = 8.
  */
-public class CS21_SecondRightmostZeroBit {
+public class CS021_SecondRightmostZeroBit {
     public static void main(String[] args) {
         System.out.println(solution(37));
     }

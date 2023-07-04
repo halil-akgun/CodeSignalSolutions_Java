@@ -19,7 +19,7 @@ Note the preceding zero written in front of the initial number: since both numbe
 they have 32 bits in their binary representation. The preceding zeros in other cases don't matter,
 so they are omitted. Here, however, it does make a difference.
  */
-public class CS22_SwapAdjacentBits {
+public class CS022_SwapAdjacentBits {
     public static void main(String[] args) {
         System.out.println(solution(13));
     }

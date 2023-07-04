@@ -12,7 +12,7 @@ solution(a, b, n) = 8.
 You will cast your first marble and get $2, after which the numbers will become 2 and 3.
 When you cast your second marble, the well will give you $6. Overall, you'll make $8. So, the output is 8.
  */
-public class CS27_MagicalWell {
+public class CS027_MagicalWell {
     public static void main(String[] args) {
         System.out.println(solution(1, 2, 2));
     }

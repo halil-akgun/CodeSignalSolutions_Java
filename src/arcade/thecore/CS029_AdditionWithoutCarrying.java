@@ -21,7 +21,7 @@ The child performs the following operations from right to left:
  - There is no digit in the first number corresponding to the leading digit of the second one,
    so the child imagines that 0 is written before 456. Thus, they get 0 + 1 = 1.
  */
-public class CS29_AdditionWithoutCarrying {
+public class CS029_AdditionWithoutCarrying {
     public static void main(String[] args) {
         System.out.println(solution(0, 0));
     }

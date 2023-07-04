@@ -14,7 +14,7 @@ solution(k) = -15.
 
 There are 1 + 3 * 3 + 5 * 5 = 35 yellow apples and 2 * 2 + 4 * 4 = 20 red apples, making the answer 20 - 35 = -15.
  */
-public class CS30_AppleBoxes {
+public class CS030_AppleBoxes {
     public static void main(String[] args) {
         System.out.println(solution(5));
     }

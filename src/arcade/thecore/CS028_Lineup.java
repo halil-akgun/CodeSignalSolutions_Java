@@ -21,7 +21,7 @@ Let's say that there are 4 students, and the second one can't tell left from rig
 only after the second, third and fifth commands will the students face the same direction.
 https://codesignal.s3.amazonaws.com/uploads/1664318501/example.png
  */
-public class CS28_Lineup {
+public class CS028_Lineup {
     public static void main(String[] args) {
         System.out.println(solution("LLARL"));
     }
