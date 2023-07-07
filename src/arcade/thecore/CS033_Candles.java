@@ -23,7 +23,7 @@ Here is what you can do to burn 9 candles:
     burn the last candle.
 Thus, you can burn 5 + 2 + 1 + 1 = 9 candles, which is the answer.
  */
-public class CS33_Candles {
+public class CS033_Candles {
     public static void main(String[] args) {
         System.out.println(solution(5, 2));
     }

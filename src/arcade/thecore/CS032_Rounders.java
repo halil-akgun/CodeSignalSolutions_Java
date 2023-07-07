@@ -18,7 +18,7 @@ For n = 1445, the output should be
 solution(n) = 2000.
 1445 -> 1450 -> 1500 -> 2000.
  */
-public class CS32_Rounders {
+public class CS032_Rounders {
     public static void main(String[] args) {
         System.out.println(solution(1445));
     }
