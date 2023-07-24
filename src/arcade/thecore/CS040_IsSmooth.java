@@ -19,7 +19,7 @@ For arr = [-5, -5, 10], the output should be
 solution(arr) = false.
 The first and middle elements are equal to -5, but the last element equals 10. Thus, arr is not smooth and the output is false.
  */
-public class CS40_IsSmooth {
+public class CS040_IsSmooth {
     public static void main(String[] args) {
         int[] arr = {7, 2, 2, 5, 10, 7};
         System.out.println(solution(arr));
