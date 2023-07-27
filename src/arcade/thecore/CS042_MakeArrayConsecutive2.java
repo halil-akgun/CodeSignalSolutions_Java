@@ -14,7 +14,7 @@ For statues = [6, 2, 3, 8], the output should be
 solution(statues) = 3.
 Ratiorg needs statues of sizes 4, 5 and 7.
  */
-public class CS42_MakeArrayConsecutive2 {
+public class CS042_MakeArrayConsecutive2 {
     public static void main(String[] args) {
         int[] arr = {6, 2, 3, 8};
         System.out.println(solution(arr));
