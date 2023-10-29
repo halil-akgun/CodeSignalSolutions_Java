@@ -23,7 +23,7 @@ s(11) = 2, so 11 is comfortable with 9, 10, 12 and 13;
 s(12) = 3, so 12 is comfortable with 9, 10, 11, 13, 14 and 15.
 Thus, there are 2 pairs of numbers comfortable with each other within the segment [10; 12]: (10, 11) and (11, 12).
  */
-public class CS47_ComfortableNumbers {
+public class CS047_ComfortableNumbers {
     public static void main(String[] args) {
         System.out.println(solution(1, 9));
     }
