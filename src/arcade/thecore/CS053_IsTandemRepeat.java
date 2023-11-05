@@ -11,7 +11,7 @@ solution(inputString) = false;
 For inputString = "2w2ww", the output should be
 solution(inputString) = false.
  */
-public class CS53_IsTandemRepeat {
+public class CS053_IsTandemRepeat {
     public static void main(String[] args) {
         System.out.println(solution("tandemtandem"));
     }
