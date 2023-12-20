@@ -20,27 +20,27 @@ https://codesignal.s3.amazonaws.com/uploads/1658518009418/solution_example.gif
  */
 public class CS095_RunnersMeetings {
     public static void main(String[] args) {
-        System.out.println(solution(new int[]{1, 4, 2}, new int[]{27, 18, 24}));
+        System.out.println(solution(new int[]{88, 86, -77, -3, -83, 80, 58, 41, -91, 29, -26, -44, 97}, new int[]{26, 16, 14, 11, 23, 17, 6, 15, 17, 18, 14, 5, 9}));
     }
 
     static int solution(int[] startPosition, int[] speed) {
-        int maxMeetings = -1;
-        int meetingPoint;
-        int currentMeeting = -1;
-        for (int i = 0; i < speed.length; i++) {
-            for (int j = i + 1; j < speed.length; j++) {
-                meetingPoint = (startPosition[i] - startPosition[j]) / (speed[j] - speed[i]);
-                if (meetingPoint >= 0) {
-                    currentMeeting = 2;
-                    for (int k = j + 1; k < speed.length; k++) {
-                        if (startPosition[i] + speed[i] * meetingPoint == startPosition[k] + speed[k] * meetingPoint) {
-                            currentMeeting++;
-                        }
+        int best = -1;
+        for (int i = 1; i < speed.length; i++) {
+            for (int j = 0; j < i; j++) {
+                int m = speed[i] - speed[j];
+                if (m != 0) {
+                    int meet = 2;
+                    int b = startPosition[j] - startPosition[i];
+                    for (int k = i + 1; k < speed.length; k++) {
+                        if (startPosition[k] * m + speed[k] * b ==
+                                startPosition[i] * m + speed[i] * b)
+                            meet++;
                     }
+                    if (meet > best)
+                        best = meet;
                 }
             }
-            maxMeetings = Math.max(maxMeetings, currentMeeting);
         }
-        return maxMeetings;
+        return best;
     }
 }
