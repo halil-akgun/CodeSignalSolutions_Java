@@ -55,17 +55,19 @@ public class CS105_StarRotation {
         for (int i = 0; i < positions.length; i++) {
             positions[i] = getCurrentPositions(matrix, center, i);
             positions[i] = updatePositions(positions[i], t);
-        }
-        return mergePositions(matrix, positions[positions.length - 1], center);
-    }
-
-    private static int[][] mergePositions(int[][] matrix, int[][] positions, int[] center) {
-        for (int j = center[0] - positions.length / 2; j <= center[0] + positions.length / 2; j++) {
-            for (int k = center[1] - positions.length / 2; k <= center[1] + positions.length / 2; k++) {
-                matrix[j][k] = positions[j - center[0] + positions.length / 2][k - center[1] + positions.length / 2];
-            }
+            mergePositions(matrix, positions[i], center);
         }
         return matrix;
+    }
+
+    private static void mergePositions(int[][] matrix, int[][] positions, int[] center) {
+        for (int j = center[0] - positions.length / 2; j <= center[0] + positions.length / 2; j++) {
+            if (center[1] + positions.length / 2 + 1 - (center[1] - positions.length / 2) >= 0)
+                System.arraycopy(positions[j - center[0] + positions.length / 2],
+                        -positions.length / 2 + positions.length / 2, matrix[j],
+                        center[1] - positions.length / 2,
+                        center[1] + positions.length / 2 + 1 - (center[1] - positions.length / 2));
+        }
     }
 
     private static int[][] getCurrentPositions(int[][] matrix, int[] center, int i) {
@@ -98,7 +100,6 @@ public class CS105_StarRotation {
         for (int i = 0; i < part.length; i++) {
             System.arraycopy(part[i], 0, updatedPositions[i], 0, part[i].length);
         }
-        Arrays.stream(updatedPositions).map(Arrays::toString).forEach(System.out::println);
 
         for (int i = 0; i < part.length; i++) {
             for (int j = 0; j < part.length; j++) {
@@ -107,7 +108,6 @@ public class CS105_StarRotation {
                 }
             }
         }
-        Arrays.stream(updatedPositions).map(Arrays::toString).forEach(System.out::println);
         return updatedPositions;
     }
 
@@ -116,9 +116,6 @@ public class CS105_StarRotation {
         if (newPosition <= 0) {
             newPosition += 8;
         }
-        System.out.println(i);
-        System.out.println(newPosition);
-        System.out.println("------------");
         for (int j = 0; j < basePositions.length; j++) {
             for (int k = 0; k < basePositions.length; k++) {
                 if (basePositions[j][k] == newPosition) {
