@@ -55,11 +55,9 @@ If a contour is represented by an n × 1 array, its center is considered to be t
 public class CS109_ContoursShifting {
     public static void main(String[] args) {
         Arrays.stream(solution(new int[][]{
-                {1, 2, 3, 4},
-                {5, 6, 7, 8},
-                {9, 10, 11, 12},
-                {13, 14, 15, 16},
-                {17, 18, 19, 20}
+                {1, 2, 3, 4, 5},
+                {6, 7, 8, 9, 10},
+                {11, 12, 13, 14, 15}
         })).map(Arrays::toString).forEach(System.out::println);
     }
 
@@ -74,10 +72,14 @@ public class CS109_ContoursShifting {
             rows -= 2;
             cols -= 2;
         }
-        System.out.println(rows);
-        System.out.println(cols);
-        if (rows == 1) rotateSingleRowClockwise(matrix, idx);
-        else if (cols == 1) rotateSingleColClockwise(matrix, idx);
+
+        if (rows == 1 && matrix[0].length > idx * 2) {
+            if (idx % 2 == 0) rotateSingleRowClockwiseDirection(matrix, idx);
+            else rotateSingleRowCounterclockwiseDirection(matrix, idx);
+        } else if (cols == 1 && matrix.length > idx * 2) {
+            if (idx % 2 == 0) rotateSingleColClockwiseDirection(matrix, idx);
+            else rotateSingleColCounterclockwiseDirection(matrix, idx);
+        }
 
         return matrix;
     }
@@ -130,21 +132,39 @@ public class CS109_ContoursShifting {
         matrix[idx + 1][idx] = temp;
     }
 
-    private static void rotateSingleRowClockwise(int[][] matrix, int idx) {
+    private static void rotateSingleRowClockwiseDirection(int[][] matrix, int idx) {
         int temp = matrix[idx][matrix[idx].length - 1 - idx];
 
-        for (int i = matrix[0].length - 1 - idx; i > 0; i--) {
+        for (int i = matrix[0].length - 1 - idx; i > idx; i--) {
             matrix[idx][i] = matrix[idx][i - 1];
         }
         matrix[idx][idx] = temp;
     }
 
-    private static void rotateSingleColClockwise(int[][] matrix, int idx) {
+    private static void rotateSingleRowCounterclockwiseDirection(int[][] matrix, int idx) {
+        int temp = matrix[idx][idx];
+
+        for (int i = idx; i < matrix[idx].length - 1 - idx; i++) {
+            matrix[idx][i] = matrix[idx][i + 1];
+        }
+        matrix[idx][matrix[idx].length - 1 - idx] = temp;
+    }
+
+    private static void rotateSingleColClockwiseDirection(int[][] matrix, int idx) {
         int temp = matrix[matrix.length - 1 - idx][idx];
 
         for (int i = matrix.length - 1 - idx; i > idx; i--) {
             matrix[i][idx] = matrix[i - 1][idx];
         }
         matrix[idx][idx] = temp;
+    }
+
+    private static void rotateSingleColCounterclockwiseDirection(int[][] matrix, int idx) {
+        int temp = matrix[idx][idx];
+
+        for (int i = idx; i < matrix.length - 1 - idx; i++) {
+            matrix[i][idx] = matrix[i + 1][idx];
+        }
+        matrix[matrix.length - 1 - idx][idx] = temp;
     }
 }
