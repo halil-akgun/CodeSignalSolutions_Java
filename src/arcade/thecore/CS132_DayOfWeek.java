@@ -1,5 +1,7 @@
 package arcade.thecore;
 
+import java.time.LocalDate;
+
 /*
 Whenever you decide to celebrate your birthday you always do this your favorite café,
 which is quite popular and as such usually very crowded. This year you got lucky:
@@ -24,7 +26,7 @@ Monday too is 2021. 2021 - 2016 = 5, which is the answer.
  */
 public class CS132_DayOfWeek {
     public static void main(String[] args) {
-        System.out.println(solution("02-01-2016"));
+        System.out.println(solution("02-29-2072"));
     }
 
     static int solution(String birthdayDate) {
@@ -34,13 +36,29 @@ public class CS132_DayOfWeek {
         int year = Integer.parseInt(arr[2]);
 
         int checkingYear = year;
-        int dayOfWeekBirthday = calculateDayOfWeek(month, day, checkingYear);
+        int indexOfDay = 0;
 
         while (true) {
             checkingYear++;
-            int nextBirthdayDayOfWeek = calculateDayOfWeek(month, day, checkingYear);
 
-            if (dayOfWeekBirthday == nextBirthdayDayOfWeek) {
+            if (day == 29 && month == 2) {
+                if (isLeapYear(checkingYear - 1)) {
+                    indexOfDay += 5;
+                    checkingYear += 3;
+                } else {
+                    indexOfDay += 9;
+                    checkingYear += 7;
+                }
+            } else if (day <= 28 && month < 3 && isLeapYear(checkingYear - 1)) {
+                indexOfDay += 2;
+            } else if (month > 2 && isLeapYear(checkingYear)) {
+                indexOfDay += 2;
+            } else {
+                indexOfDay += 1;
+            }
+
+            if (indexOfDay % 7 == 0) {
+                if (day == 29 && month == 2 && !isLeapYear(checkingYear)) continue;
                 return checkingYear - year;
             }
         }
@@ -56,19 +74,25 @@ public class CS132_DayOfWeek {
         } else return year % 4 == 0;
     }
 
-    private static int calculateDayOfWeek(int month, int day, int year) {
-        int[] monthLengths = {31, isLeapYear(year) ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+    static int solution2(String birthdayDate) {
+        String[] arr = birthdayDate.split("-");
+        int month = Integer.parseInt(arr[0]);
+        int day = Integer.parseInt(arr[1]);
+        int year = Integer.parseInt(arr[2]);
 
-        int days = 0;
-        for (int i = 1; i < month; i++) {
-            days += monthLengths[i - 1];
+        int checkingYear = year;
+        int dayOfWeekBirthday = LocalDate.of(year, month, day).getDayOfWeek().getValue();
+
+        while (true) {
+            checkingYear++;
+            try {
+                int nextBirthdayDayOfWeek = LocalDate.of(checkingYear, month, day).getDayOfWeek().getValue();
+
+                if (dayOfWeekBirthday == nextBirthdayDayOfWeek) {
+                    return checkingYear - year;
+                }
+            } catch (Exception ignored) {
+            }
         }
-        days += day;
-
-        for (int i = 1900; i < year; i++) {
-            days += isLeapYear(i) ? 366 : 365;
-        }
-
-        return (days + 1) % 7; // +1 cunku 1900 yili pazartesi ile basliyor
     }
 }
